@@ -16,9 +16,7 @@ jobs:
       - name: Start project
       - run: npm install
 
-      - name: Run webapp
-        uses: actions/checkout@v3
-      - run: node webapp.js
+      
 
       - name: GreenFrame Analysis
         uses: marmelab/greenframe-action@1.0.0
