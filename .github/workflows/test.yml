@@ -15,8 +15,11 @@ jobs:
           node-version: 16
       - name: Start project
         run: |
-          make install
-          make start
+          npm cache clean --force
+          npm install
+          npm start
+          node webapp.js
+          
       - name: GreenFrame Analysis
         uses: marmelab/greenframe-action@1.0.0
         env:
