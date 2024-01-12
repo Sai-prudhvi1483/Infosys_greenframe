@@ -17,6 +17,7 @@ jobs:
         run: |
           make install
           make start
+          node webapp.js
       - name: GreenFrame Analysis
         uses: marmelab/greenframe-action@1.0.0
         env:
