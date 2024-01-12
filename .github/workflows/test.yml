@@ -17,6 +17,7 @@ jobs:
         run: |
           npm cache clean --force
           npm install
+          node /infosys_greenframe/webapp.js
       - name: GreenFrame Analysis
         uses: marmelab/greenframe-action@1.0.0
         env:
