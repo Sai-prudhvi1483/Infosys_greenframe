@@ -13,12 +13,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Start project
-      - run: npm install
+          
+      - name: Install Dependencies
+        run: npm install
 
-      - name: Run webapp
-        uses: actions/checkout@v3
-      - run: node webapp.js
+      - name: Run test
+        run: npm test
 
       - name: GreenFrame Analysis
         uses: marmelab/greenframe-action@1.0.0
