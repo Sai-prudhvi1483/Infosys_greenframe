@@ -1,13 +1,13 @@
-const express = require('express');
-const app = express();
-const port = 8081;
-
-app.use(express.static('public'));
-
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-});
-
-app.listen(port, () => {
-    console.log(`Web app is running on http://localhost:${port}`);
-});
+const http = require("http"); 
+const { co2 } = require("@tgwf/co2");
+//create a server object: 
+http 
+  .createServer(function (req, res) { 
+    res.write("<h1>Hello World!</h1>");  
+    //write a response to the client 
+     
+    res.end();  
+    //end the response 
+  }) 
+  .listen(8081);  
+//Server runs on localhost:8080 
