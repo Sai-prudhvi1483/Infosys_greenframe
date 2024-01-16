@@ -24,7 +24,7 @@ jobs:
         run: npm install jest supertest --save-dev
         
       - name: Run test
-        run: npm test
+        run: npm start
 
       - name: GreenFrame Analysis
         uses: marmelab/greenframe-action@1.0.0
