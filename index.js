@@ -1,13 +1,13 @@
-var http = require('http');
+const express = require('express');
+const app = express();
+const port = 8081;
 
-var server = http.createServer(function(request, response) {
+app.use(express.static('public'));
 
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello World!");
-
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
 });
 
-var port = 8081;
-server.listen(port);
-
-console.log("Server running at http://localhost:%d", port);
+app.listen(port, () => {
+    console.log(`Web app is running on http://localhost:${port}`);
+});
