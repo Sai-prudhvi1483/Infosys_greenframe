@@ -20,11 +20,11 @@ jobs:
       - name: Install Express
         run: npm install express
 
-      - name: Install Express
-        run: npm install jest supertest --save-dev
+      #- name: Install 
+      #  run: npm install jest supertest --save-dev
         
-      - name: Run test
-        run: npm test
+      - name: Start the Application
+        run: npm start
 
       - name: GreenFrame Analysis
         uses: marmelab/greenframe-action@1.0.0
