@@ -13,11 +13,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install
-      - run: npm ci
-      - run: npm install express
-      - run: npm run build --if-present
-      - run: npm start
+      - name: Start Project
+        run: |
+          make install
+          make start
+      #- run: npm ci
+      #- run: npm install express
+      #- run: npm run build --if-present
+      #- run: npm start
 
       - name: GreenFrame Analysis
         uses: marmelab/greenframe-action@1.0.0
