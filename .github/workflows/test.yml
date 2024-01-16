@@ -13,18 +13,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Install Express
-        run: npm install express
-
-      #- name: Install 
-      #  run: npm install jest supertest --save-dev
-        
-      - name: Start the Application
-        run: npm start
+      - run: npm install
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
 
       - name: GreenFrame Analysis
         uses: marmelab/greenframe-action@1.0.0
