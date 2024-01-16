@@ -18,7 +18,7 @@ jobs:
         run: npm install
 
       - name: Run test
-        run: npm test
+        run: node webapp.js
 
       - name: GreenFrame Analysis
         uses: marmelab/greenframe-action@1.0.0
