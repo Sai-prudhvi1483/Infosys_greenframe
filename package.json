@@ -1,15 +1,20 @@
 {
-  "name": "co2js-node",
+  "name": "nodejs-hello-world",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hello World sample app",
   "main": "index.js",
   "scripts": {
-    "start": "node webapp.js"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@tgwf/co2": "^0.13.10"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fhinkel/nodejs-hello-world.git"
+  },
+  "author": "fhinkel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fhinkel/nodejs-hello-world/issues"
+  },
+  "homepage": "https://github.com/fhinkel/nodejs-hello-world#readme"
 }
